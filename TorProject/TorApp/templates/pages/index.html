@@ -1,0 +1,368 @@
+﻿<!DOCTYPE html>
+{% load static %}
+<html>
+
+	<head>
+		<title>TOREnterprises</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="{% static 'assets/img/logo/trlogo.png' %}">
+		<link href="'https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+			type="text/css">
+		<link href="{% static 'assets/fonts/sb-bistro/sb-bistro.css' %}" rel="stylesheet" type="text/css">
+		<link href="{% static 'assets/fonts/font-awesome/font-awesome.css' %}" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" type="text/css" media="all"
+			href="{% static 'assets/packages/bootstrap/bootstrap.css' %}">
+		<link rel="stylesheet" type="text/css" media="all"
+			href="{% static 'assets/packages/o2system-ui/o2system-ui.css' %}">
+		<link rel="stylesheet" type="text/css" media="all"
+			href="{% static 'assets/packages/owl-carousel/owl-carousel.css' %}">
+		<link rel="stylesheet" type="text/css" media="all"
+			href="{% static 'assets/packages/cloudzoom/cloudzoom.css' %}">
+		<link rel="stylesheet" type="text/css" media="all"
+			href="{% static 'assets/packages/thumbelina/thumbelina.css' %}">
+		<link rel="stylesheet" type="text/css" media="all"
+			href="{% static 'assets/packages/bootstrap-touchspin/bootstrap-touchspin.css ' %}">
+		<link rel="stylesheet" type="text/css" media="all" href="{% static 'assets/css/theme.css' %}">
+
+	</head>
+
+	<body>
+		<div class="page-header">
+			<!--=============== Navbar ===============-->
+			<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="page-navigation">
+				<div class="container">
+					<!-- Navbar Brand -->
+					<a href="" class="navbar-brand">
+						<img src="{% static 'assets/img/logo/mainlogo.png' %}" alt="">
+					</a>
+
+					<!-- Toggle Button -->
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse"
+						aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse" id="navbarcollapse">
+						<!-- Navbar Menu -->
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item">
+								<a href="{% url 'index' %}" class="nav-link">Home</a>
+							</li>
+							<li class="nav-item">
+								<a href="{% url 'storage' %}" class="nav-link">Storage</a>
+							</li>
+							<li class="nav-item">
+								<a href="{% url 'price' %}" class="nav-link">Price</a>
+							</li>
+							<li class="nav-item">
+								<a href="{% url 'about' %}" class="nav-link">About us</a>
+							</li>
+							<li class="nav-item">
+								<a href="{% url 'contact' %}" class="nav-link">Contact</a>
+							</li>
+
+						</ul>
+					</div>
+
+				</div>
+			</nav>
+		</div>
+		<div id="page-content" class="page-content">
+			<div class="banner">
+				<div class="jumbotron jumbotron-video text-center bg-dark mb-0 rounded-0">
+					<video controls muted width="100%" preload="auto" loop autoplay muted>
+						<source src="{% static 'assets/media/explore2.mp4' %}" type='video/mp4' />
+						<source src="{% static 'assets/media/explorer.mp4' %}" type='video/webm' />
+					</video>
+					<div class="container">
+						<h1 class="pt-5">
+							Save Time and Enjoy Bussiness safely<br>
+
+						</h1>
+						<p class="lead">
+							At TOR Enterprises quality produce and reliablility is assured contact us today and be happy
+							you did
+						</p>
+						{% for Homepage in home %}
+						<div class="row">
+
+							<div class="col-md-4">
+								<a href="{% url 'contact' %}" class="nav-link">
+									<div class="card border-0 text-center">
+										<div class="card-icon">
+											<div class="card-icon-i">
+												<i class="fa fa-shopping-basket"></i>
+											</div>
+										</div>
+										<div class="card-body">
+											<h4 class="card-title">
+												{{ Homepage.Service_name }}
+											</h4>
+											<p id="card-text">
+												{{ Homepage.Service_details }}
+											</p>
+
+										</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<a href="{% url 'contact' %}" class="nav-link">
+								<div class="card border-0 text-center">
+									<div class="card-icon">
+										<div class="card-icon-i">
+											<i class="fas fa-truck"></i>
+
+										</div>
+									</div>
+									<div class="card-body">
+										<h4 class="card-title">
+
+											{{ Homepage.Service2_name }}
+										</h4>
+
+										<p class="card-text">
+											{{ Homepage.Service2_details }}
+										</p>
+
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-md-4">
+							<div class="card border-0 text-center">
+								<div class="card-icon">
+									<div class="card-icon-i">
+										<i class="	fas fa-cart-plus"></i>
+									</div>
+								</div>
+								<div class="card-body">
+									<h4 class="card-title">
+										{{ Homepage.Service3_name }}
+									</h4>
+									<p class="card-text">
+										{{ Homepage.Service3_details }}
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section id="why"><a href="service">
+				<h2 class="title">Why TOR Enterprises</h2>
+			</a>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card border-0 text-center gray-bg">
+							<div class="card-icon">
+								<div class="card-icon-i text-success">
+									<i class="fas fa-leaf"></i>
+								</div>
+							</div>
+							<div class="card-body">
+								<h4 class="card-title">
+									{{ Homepage.Benefit_head }}
+								</h4>
+								<p class="card-text">
+									{{ Homepage.Benefit_daetails }}
+								</p>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card border-0 text-center gray-bg">
+							<div class="card-icon">
+								<div class="card-icon-i text-success">
+									<i class="fa fa-question"></i>
+								</div>
+							</div>
+							<div class="card-body">
+								<h4 class="card-title">
+									{{ Homepage.Benefit2_head }}
+								</h4>
+								<p class="card-text">
+									{{ Homepage.Benefit2_daetails }}
+								</p>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card border-0 text-center gray-bg">
+							<div class="card-icon">
+								<div class="card-icon-i text-success">
+									<i class="fas fa-smile"></i>
+								</div>
+							</div>
+							<div class="card-body">
+								<h4 class="card-title">
+									{{ Homepage.Benefit3_head }}
+								</h4>
+								<p class="card-text">
+									{{ Homepage.Benefit3_daetails }}
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-12 mt-5 text-center">
+						<a href="{% url 'contact' %}" class="btn btn-primary btn-lg">SHOP NOW</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		{% endfor %}
+		<section id="categories" class="pb-0 gray-bg">
+			<h2 class="title">Categories</h2>
+			<div class="landing-categories owl-carousel">
+				<div class="item">
+					<div class="card rounded-0 border-0 text-center">
+						<img src="{% static 'assets/img/bean.jpg' %}">
+						<div class="card-img-overlay d-flex align-items-center justify-content-center">
+							<!-- <h4 class="card-title">Vegetables</h4> -->
+							<a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Cow pea</a>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="card rounded-0 border-0 text-center">
+						<img src="{% static 'assets/img/cowpea.jpg' %}">
+						<div class="card-img-overlay d-flex align-items-center justify-content-center">
+							<!-- <h4 class="card-title">Fruits</h4> -->
+							<a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Beans</a>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="card rounded-0 border-0 text-center">
+						<img src="{% static  'assets/img/okpeye.jpg' %}">
+						<div class="card-img-overlay d-flex align-items-center justify-content-center">
+							<!-- <h4 class="card-title">Meats</h4> -->
+							<a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Okpeye</a>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="card rounded-0 border-0 text-center">
+						<img src="{% static 'assets/img/egusi.jpg' %}">
+						<div class="card-img-overlay d-flex align-items-center justify-content-center">
+							<!-- <h4 class="card-title">Fishes</h4> -->
+							<a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Egusi</a>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="card rounded-0 border-0 text-center">
+						<img src="{% static  'assets/img/apama.jpg' %}">
+						<div class="card-img-overlay d-flex align-items-center justify-content-center">
+							<!-- <h4 class="card-title">Frozen Foods</h4> -->
+							<a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Brown small beans </a>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="card rounded-0 border-0 text-center">
+						<img src="{% static  'assets/img/blackbeans.jpg' %}">
+						<div class="card-img-overlay d-flex align-items-center justify-content-center">
+							<!-- <h4 class="card-title">Package</h4> -->
+							<a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Black small beans </a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<h5>About</h5>
+						<p>TOR Enterprises majors in the storage, sales and supply of agricultural farm produce
+							ranging from Grains, Beans, Rice, Melon seeds, Soya beans, okpeye, Achi, Cashew, Groundnut
+							e.t.c within nigeria.
+							TOR Enterprises aims at making agricultural farm produce investment and retailing easier for
+							its customers.
+						</p>
+					</div>
+					<div class="col-md-3">
+						<h5>Links</h5>
+						<ul>
+							<li>
+								<a href="{% url 'about' %}">About</a>
+							</li>
+							<li>
+								<a href="{% url 'contact' %}">Contact Us</a>
+							</li>
+							<li>
+								<a href="{% url 'faq' %}">FAQ</a>
+							</li>
+
+							<li>
+								<a href="{% url 'terms' %}">Terms</a>
+							</li>
+							<li>
+								<a href="{% url 'privacy' %}">Privacy Policy</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h5>Contact</h5>
+						<ul>
+							<li>
+								<a href="tel:+2347059342066"><i class="fa fa-phone"></i> 07059342066</a>
+							</li>
+							<li>
+								<a href="mailto: torenterprises6@gmail.com"><i class="fa fa-envelope"></i>
+									torenterprises6@gmail.com</a>
+							</li>
+						</ul>
+
+
+						<h5>Follow Us</h5>
+						<ul class="social">
+							<li>
+								<a href="https://www.facebook.com/TOR-Enterprises-102191905800887/" target="_blank"><i
+										class="fab fa-facebook-f"></i></a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/invites/contact/?i=a289nszmb2bm&utm_content=o6trhyk"
+									target="_blank"><i class="fab fa-instagram"></i></a>
+							</li>
+							<li>
+								<a href="https://twitter.com/TOREnterprises?t=bzPYarZqG94tfDJMiBTtcQ&s=09"
+									target="_blank"><i class="fab fa-twitter"></i></a>
+							</li>
+						</ul>
+					</div>
+
+
+				</div>
+			</div>
+			<p class="copyright">&copy; 2022 TOR | Enterprises. All rights reserved. developed by rolandobiora rendered
+				with djangoframework</p>
+		</footer>
+
+		<script type="text/javascript" src="{% static 'assets/js/jquery.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/jquery-migrate.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/packages/bootstrap/libraries/popper.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/packages/bootstrap/bootstrap.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/packages/o2system-ui/o2system-ui.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/packages/owl-carousel/owl-carousel.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/packages/cloudzoom/cloudzoom.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/packages/thumbelina/thumbelina.js' %}"></script>
+		<script type="text/javascript"
+			src="{% static 'assets/packages/bootstrap-touchspin/bootstrap-touchspin.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/theme.js' %}"></script>
+	</body>
+
+</html>

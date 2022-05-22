@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+{%load static %}
+<html>
+
+	<head>
+		<title>Fargostores</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="{% static 'assets/img/logo/mainlogo.png' %}">
+		<link href="'https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+			type="text/css">
+		<link href="{% static 'assets/fonts/sb-bistro/sb-bistro.css' %}" rel="stylesheet" type="text/css">
+		<link href="{% static 'assets/fonts/font-awesome/font-awesome.css' %}" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" type="text/css" media="all"
+			href="{% static 'assets/packages/bootstrap/bootstrap.css' %}">
+		<link rel="stylesheet" type="text/css" media="all"
+			href="{% static 'assets/packages/o2system-ui/o2system-ui.css' %}">
+		<link rel="stylesheet" type="text/css" media="all"
+			href="{% static 'assets/packages/owl-carousel/owl-carousel.css' %}">
+		<link rel="stylesheet" type="text/css" media="all"
+			href="{% static 'assets/packages/cloudzoom/cloudzoom.css' %}">
+		<link rel="stylesheet" type="text/css" media="all"
+			href="{% static 'assets/packages/thumbelina/thumbelina.css' %}">
+		<link rel="stylesheet" type="text/css" media="all"
+			href="{% static 'assets/packages/bootstrap-touchspin/bootstrap-touchspin.css ' %}">
+		<link rel="stylesheet" type="text/css" media="all" href="{% static 'assets/css/theme.css' %}">
+
+	</head>
+
+	<body>
+		<div class="page-header">
+			<!--=============== Navbar ===============-->
+			<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="page-navigation">
+				<div class="container">
+					<!-- Navbar Brand -->
+					<a href="index.html" class="navbar-brand">
+						<img src="{% static 'assets/img/logo/mainlogo.png' %}" alt="">
+					</a>
+
+					<!-- Toggle Button -->
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse"
+						aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarcollapse">
+						<!-- Navbar Menu -->
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item">
+								<a href="{% url 'index' %}" class="nav-link">Home</a>
+							</li>
+							<li class="nav-item">
+								<a href="{% url 'storage' %}" class="nav-link">Storage</a>
+							</li>
+							<li class="nav-item">
+								<a href="{% url 'price' %}" class="nav-link">Price</a>
+							</li>
+							<li class="nav-item">
+								<a href="{% url 'about' %}" class="nav-link">About us</a>
+							</li>
+							<li class="nav-item">
+								<a href="{% url 'contact' %}" class="nav-link">Contact</a>
+							</li>
+
+						</ul>
+					</div>
+
+				</div>
+			</nav>
+		</div>
+		<div id="page-content" class="page-content">
+			<div class="banner">
+				<div class="jumbotron jumbotron-bg text-center rounded-0"
+					style="background-image: url('/static/assets/img/bg-header.jpg');">
+					<div class="container">
+						<h1 class="pt-5">
+							Storage plans
+						</h1>
+						<h5>Storage fees are only claculated and deducted after sales</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container content">
+			<div class="row gutters">
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<div class="plan-card plan-one">
+						<div class="pricing-header">
+							<h4 class="plan-title">Basic</h4>
+							<div class="plan-cost">Pay N105 </div>
+							<div class="plan-save">Daily</div>
+						</div>
+						<ul class="plan-features">
+							<li>1 - 30 bags of Goods</li>
+							<li>Duration: maximum of 6 months</li>
+							<li>Feedbacks: Monthly</li>
+							<li>BASIC access card </li>
+						</ul>
+						<div class="plan-footer">
+							<a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Select Plan</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<div class="plan-card plan-one">
+						<div class="pricing-header orange">
+							<h4 class="plan-title">Standard</h4>
+							<div class="plan-cost">Pay N200</div>
+							<div class="plan-save">Daily</div>
+						</div>
+						<ul class="plan-features">
+							<li>31 - 60 bags of goods </li>
+							<li>Duration : desired duration</li>
+							<li>Feedback: Twice in a month</li>
+							<li>Can visit the store monthly </li>
+							<li>STANDARD access card </li>
+
+						</ul>
+						<div class="plan-footer">
+							<a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Select Plan</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<div class="plan-card plan-one">
+						<div class="pricing-header green">
+							<h4 class="plan-title">Premium</h4>
+							<div class="plan-cost">Pay N350</div>
+							<div class="plan-save">Daily </div>
+						</div>
+						<ul class="plan-features">
+							<li>61 bags and above </li>
+							<li>Duration: desirable</li>
+							<li>Feedback: Weekly </li>
+							<li>Can visit the store weekly</li>
+							<li>Can request delivery </li>
+							<li>weekly Inspection</li>
+							<li>PREMIUM access card </li>
+						</ul>
+						<div class="plan-footer">
+							<a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Select Plan</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+
+
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<h5>About</h5>
+						<p>TOR Enterprises majors in the storage, sales and supply of agricultural farm produce
+							ranging from Grains, Beans, Rice, Melon seeds, Soya beans, okpeye, Achi, Cashew, Groundnut
+							e.t.c within nigeria.
+							TOR Enterprises aims at making agricultural farm produce investment and retailing easier for
+							its customers.
+						</p>
+					</div>
+					<div class="col-md-4">
+						<h5>Links</h5>
+						<ul>
+							<li>
+								<a href="{% url 'about' %}">About</a>
+							</li>
+							<li>
+								<a href="{% url 'contact' %}">Contact Us</a>
+							</li>
+							<li>
+								<a href="{% url 'faq' %}">FAQ</a>
+							</li>
+
+							<li>
+								<a href="{% url 'terms' %}">Terms</a>
+							</li>
+							<li>
+								<a href="{% url 'privacy' %}">Privacy Policy</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h5>Contact</h5>
+						<ul>
+							<li>
+								<a href="tel:+2347059342066"><i class="fa fa-phone"></i> 07059342066</a>
+							</li>
+							<li>
+								<a href="mailto: torenterprises6@gmail.com"><i class="fa fa-envelope"></i>
+									torenterprises6@gmail.com</a>
+							</li>
+						</ul>
+
+
+						<h5>Follow Us</h5>
+						<ul class="social">
+							<li>
+								<a href="https://www.facebook.com/TOR-Enterprises-102191905800887/" target="_blank"><i
+										class="fab fa-facebook-f"></i></a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/invites/contact/?i=a289nszmb2bm&utm_content=o6trhyk"
+									target="_blank"><i class="fab fa-instagram"></i></a>
+							</li>
+							<li>
+								<a href="https://twitter.com/TOREnterprises?t=bzPYarZqG94tfDJMiBTtcQ&s=09"
+									target="_blank"><i class="fab fa-twitter"></i></a>
+							</li>
+						</ul>
+					</div>
+					<div class="newsl">
+
+
+					</div>
+				</div>
+			</div>
+			<p class="copyright">&copy; 2022 TOR | Enterprises. All rights reserved. developed by rolandobiora rendered
+				with djangoframework</p>
+		</footer>
+
+		<script type="text/javascript" src="{% static 'assets/js/jquery.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/jquery-migrate.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/packages/bootstrap/libraries/popper.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/packages/bootstrap/bootstrap.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/packages/o2system-ui/o2system-ui.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/packages/owl-carousel/owl-carousel.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/packages/cloudzoom/cloudzoom.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/packages/thumbelina/thumbelina.js' %}"></script>
+		<script type="text/javascript"
+			src="{% static 'assets/packages/bootstrap-touchspin/bootstrap-touchspin.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/theme.js' %}"></script>
+	</body>
+
+</html>
